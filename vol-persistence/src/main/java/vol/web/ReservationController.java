@@ -30,7 +30,7 @@ public class ReservationController {
 
 	@GetMapping("/")
 	public String home() {
-		return "";
+		return "forward:list";
 	}
 
 	@GetMapping("/list")
