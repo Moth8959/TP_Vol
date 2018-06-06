@@ -9,17 +9,17 @@
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css"/>">
 	<script src="<c:url value="/js/jquery.min.js"/>"></script>
 <script src="<c:url value="/js/bootstrap.min.js"/>"></script>
-<title>Liste des compagnies aériennes</title>
+<title><spring:message code="compagnie.list.title"/></title>
 </head>
 <body>
  	<div class="container">
-		<h2>Liste des compagnies aériennes</h2>
+		<h2><spring:message code="compagnie.list.table"/></h2>
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Identifiant</th>
-					<th>Nom</th>
-					<th>Liste des vols</th>
+					<th><spring:message code="compagnie.list.id"/></th>
+					<th><spring:message code="compagnie.list.nom"/></th>
+					<th><spring:message code="compagnie.list.liste"/></th>
 					<th></th>
 				</tr>
 			</thead>
@@ -31,13 +31,13 @@
 					<c:url var="deleteUrl" value="/agence/compagnieAerienne/delete">
 						<c:param name="id">${compagnieAerienne.id}</c:param>
 					</c:url>
-					<!--<c:url var="listeVolUrl" value="/agence/vol/list">
+					<c:url var="listeVolUrl" value="/">
 						<c:param name="id">${compagnieAerienne.id}</c:param>
-					</c:url> -->
+					</c:url>
 					<tr>
 						<td>${compagnieAerienne.id}</td>
 						<td>${compagnieAerienne.nom}</td>
-						<td></td><!--<a class="btn btn-primary btn-xs" ><span class="glyphicon glyphicon-plane"></span></a> href="${listeVolUrl}" --> 
+						<td><a class="btn btn-primary btn-xs"  href="${listeVolUrl}"><span class="glyphicon glyphicon-plane"></span></a></td>
 						<td><a class="btn btn-primary btn-xs" href="${editUrl}"><span class="glyphicon glyphicon-pencil"></span></a><a class="btn btn-danger btn-xs" href="${deleteUrl}"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 				</c:forEach>

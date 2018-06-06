@@ -11,12 +11,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Version;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="compagnie_aerienne")
 public class CompagnieAerienne {
 
 	private Long id;
+	@NotEmpty(message = "{compagnie.edit.nom.required}")
 	private String nom;
 	private List<CompagnieAerienneVol> compagniesAerienneVol;
 	private int version;

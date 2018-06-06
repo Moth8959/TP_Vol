@@ -39,7 +39,6 @@ public class CompagnieAerienneController {
 
 		model.addAttribute("compagnieAeriennes", liste);
 
-
 		return "/agence/compagnieAerienne/liste";
 	}
 
@@ -61,13 +60,11 @@ public class CompagnieAerienneController {
 		return "/agence/compagnieAerienne/edit";
 	}
 
-	@PostMapping("/save") // @Valid , BindingResult result
-	public String save(@ModelAttribute("compagnieAerienne") CompagnieAerienne eleve,
-			Model model) {
-//		if (result.hasErrors()) {
-//			System.out.println("La compagnie aérienne n'a pas été enregistré.");
-//			return "/agence/compagnieAerienne/edit";
-//		}
+	@PostMapping("/save") //  
+	public String save(@Valid @ModelAttribute("compagnieAerienne") CompagnieAerienne eleve, BindingResult result) {
+		if (result.hasErrors()) {
+			return "/agence/compagnieAerienne/edit";
+		}
 		compagnieAerienneDao.save(eleve);
 
 		return "redirect:liste";
@@ -85,10 +82,5 @@ public class CompagnieAerienneController {
 	public String cancel() {
 		return "forward:liste";
 	}
-
-//	 @InitBinder
-//	 protected void initBinder(WebDataBinder binder) {
-//	 binder.addValidators(new CompagnieAerienneValidator());
-//	 }
 
 }
