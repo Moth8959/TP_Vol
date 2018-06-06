@@ -61,5 +61,8 @@ public class CompagnieAerienne {
 		this.version = version;
 	}
 	
+	public String toString() {
+		return nom+" id : "+id;
+	}
 
 }
