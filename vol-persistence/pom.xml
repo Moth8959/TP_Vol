@@ -4,7 +4,7 @@
 	<groupId>sopra.energie</groupId>
 	<artifactId>vol-persistence</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>Vol Persistence</name>
 	<dependencies>
 		<dependency>
