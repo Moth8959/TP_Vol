@@ -10,13 +10,13 @@
 	<context:component-scan
 		base-package="vol.web" />
 
-	<mvc:annotation-driven />
+	<mvc:annotation-driven validator="validator"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/views/jsp/agence" />
+		<property name="prefix" value="/WEB-INF/views/jsp" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 
@@ -46,5 +46,9 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 	
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
 
 </beans>

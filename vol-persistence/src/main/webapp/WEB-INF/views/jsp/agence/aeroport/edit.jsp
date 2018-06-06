@@ -27,7 +27,7 @@
 				
 				
 				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span></button>
-				<a href="<c:url value="/aeroport/cancel"/>" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span></a>
+				<a href="<c:url value="/agence/aeroport/cancel"/>" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span></a>
 			</form:form>
 		</fieldset>
 	</div>

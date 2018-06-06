@@ -20,7 +20,7 @@ import vol.model.Aeroport;
 import vol.repository.AeroportDao;
 
 @Controller
-@RequestMapping("/aeroport")
+@RequestMapping("/agence/aeroport")
 public class AeroportController {
 
 	@Autowired
@@ -38,12 +38,12 @@ public class AeroportController {
 
 		model.addAttribute("aeroports", liste);
 
-		return "/aeroport/list";
+		return "/agence/aeroport/list";
 }
 	
 	@GetMapping("/add")
 	public ModelAndView add() {
-		return new ModelAndView("/aeroport/edit", "aeroport", new Aeroport());
+		return new ModelAndView("/agence/aeroport/edit", "aeroport", new Aeroport());
 	}
 	@GetMapping("/edit")
 	public String edit(@RequestParam Long id, Model model) {
@@ -55,14 +55,14 @@ public class AeroportController {
 			model.addAttribute("aeroport", new Aeroport());
 		}
 
-		return "/aeroport/edit";
+		return "/agence/aeroport/edit";
 	}
 
 	@PostMapping("/save")
 	public String save(@Valid @ModelAttribute("aeroport") Aeroport aeroport, BindingResult result) {
 
 		if (result.hasErrors()) {
-			return "/aeroport/edit";
+			return "/agence/aeroport/edit";
 		}
 
 		aeroportDao.save(aeroport);

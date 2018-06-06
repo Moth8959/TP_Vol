@@ -25,10 +25,10 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${aeroports}" var="aeroport">
-					<c:url var="editUrl" value="/aeroport/edit">
+					<c:url var="editUrl" value="/agence/aeroport/edit">
 						<c:param name="id">${aeroport.id}</c:param>
 					</c:url>
-					<c:url var="deleteUrl" value="/aeroport/delete">
+					<c:url var="deleteUrl" value="/agence/aeroport/delete">
 						<c:param name="id">${aeroport.id}</c:param>
 					</c:url>
 					<tr>
@@ -40,7 +40,7 @@
 			</tbody>
 		</table>
 
-		<a class="btn btn-info btn-md" href="<c:url value="/aeroport/add"/>"> <span
+		<a class="btn btn-info btn-md" href="<c:url value="/agence/aeroport/add"/>"> <span
 			class="glyphicon glyphicon-plus"></span>
 		</a>
 	</div>
