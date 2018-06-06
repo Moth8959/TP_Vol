@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,20 +9,20 @@
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css"/>">
 <script src="<c:url value="/js/jquery.min.js"/>"></script>
 <script src="<c:url value="/js/bootstrap.min.js"/>"></script>
-<title>Liste des vols</title>
+<title><spring:message code="vol.list.title"/></title>
 </head>
 <body>
 
 	<div class="container">
-		<h2>Liste des vols</h2>
+		<h2><spring:message code="vol.list.table"/></h2>
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>id</th>
-					<th>Date arrivée</th>
-					<th>Date départ</th>
-					<th>Heure arrivée</th>
-					<th>Heure départ</th>
+					<th><spring:message code="vol.list.id"/></th>
+					<th><spring:message code="vol.list.dateDeparture"/></th>
+					<th><spring:message code="vol.list.dateArrival"/></th>
+					<th><spring:message code="vol.list.timeDeparture"/></th>
+					<th><spring:message code="vol.list.timeArrival"/></th>
 				</tr>
 			</thead>
 			<tbody>
