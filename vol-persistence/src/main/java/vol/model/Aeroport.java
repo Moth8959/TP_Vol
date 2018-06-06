@@ -10,12 +10,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Version;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "aeroport")
 public class Aeroport {
-
+	
 	private Long id;
+	@NotEmpty(message = "{aeroport.edit.nom.required}")
 	private String nom;
 	private List<VilleAeroport> villeAeroport;
 	private List<Escale> escales;
@@ -69,6 +71,5 @@ public class Aeroport {
 	public void setVersion(int version) {
 		this.version = version;
 	}
-
 
 }
