@@ -10,38 +10,38 @@
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css"/>">
 <script src="<c:url value="/js/jquery.min.js"/>"></script>
 <script src="<c:url value="/js/bootstrap.min.js"/>"></script>
-<title><spring:message code="compagnie.edit.title" /></title>
-<title>COUCOUCOUCOU</title>
+<title><spring:message code="home.title" /></title>
 </head>
 <body>
 
-	<h1>BIENVENUE CHEZ NOUS</h1>
+	<h1><spring:message code="home.welcomeMessage" /></h1>
+	<spring:message code="home.welcomeText" />
 
 	<br />
 	<div class="container">
 		<div class="row">
 			<a href="<c:url value="/agence/aeroport/" />"
-				class="btn btn-primary lg btn-block">Aeroport</a>
+				class="btn btn-primary lg btn-block"><spring:message code="home.menuAeroport" /></a>
 		</div>
 		<br />
 		<div class="row">
 			<a href="<c:url value="/agence/compagnieAerienne/" />"
-				class="btn btn-primary lg btn-block">Compagnie Aerienne</a>
+				class="btn btn-primary lg btn-block"><spring:message code="home.menuCompAerienne" /></a>
 		</div>
 		<br />
 		<div class="row">
 			<a href="<c:url value="/agence/reservation/" />"
-				class="btn btn-primary lg btn-block">Reservation</a>
+				class="btn btn-primary lg btn-block"><spring:message code="home.menuReservation" /></a>
 		</div>
 		<br />
 		<div class="row">
 			<a href="<c:url value="/agence/ville/" />"
-				class="btn btn-primary lg btn-block">Ville</a>
+				class="btn btn-primary lg btn-block"><spring:message code="home.menuVille" /></a>
 		</div>
 		<br />
 		<div class="row">
 			<a href="<c:url value="/agence/vol/" />"
-				class="btn btn-primary lg btn-block">Vol</a>
+				class="btn btn-primary lg btn-block"><spring:message code="home.menuVol" /></a>
 		</div>
 	</div>
 </body>
